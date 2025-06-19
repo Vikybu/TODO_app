@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todo-app">
+        <div class="todo-header">
+            <h3>Ma liste de tâches</h3>
+            <div class="todo-input-group">
+                <input type="text" id="nouvelle-tache" placeholder="Ajouter une nouvelle tâche..." maxlength="100">
+                <button id="btn-ajouter-tache" class="btn-primary">Ajouter</button>
+            </div>
+        </div>
+
+        <ul id="liste-taches" class="liste-taches">
+            <!-- Les tâches seront ajoutées ici dynamiquement -->
+            <li class="tache-exemple">
+                <span class="texte-tache">Exemple de tâche (cliquez pour marquer comme terminée)</span>
+                <button class="btn-supprimer">Supprimer</button>
+            </li>
+        </ul>
+
+        <div class="todo-stats">
+            <span id="nombre-taches">1 tâche(s)</span>
+        </div>
+    </div>
+</body>
+<script defer src="script.js"></script>
+</html>
