@@ -16,14 +16,13 @@ Structure d'une tâche
 </li>
 */
 
-index=0
+compteurDeTache=0
 const btnAjouter = document.querySelector('#btn-ajouter-tache')
+const nvelleTache = document.querySelector('#nouvelle-tache')
+const ulTache = document.querySelector('#liste-taches')
 
 //Ajouter une nouvelle tâche quand on clique sur "Ajouter"
 function ajoutTache(){
-    const nvelleTache = document.querySelector('#nouvelle-tache')
-    const ulTache = document.querySelector('#liste-taches')
-
     const tache = document.createElement('li')    
     tache.className = 'tache'
     const texteTache = document.createElement('span')
@@ -32,22 +31,22 @@ function ajoutTache(){
     btnSupprimer.className = 'btn-supprimer'
     btnSupprimer.innerText = 'Supprimer'
 
-    texteTache.innerText = nvelleTache.value
+    texteTache.innerText = nvelleTache.value + " "
 
     tache.appendChild(texteTache)
     tache.appendChild(btnSupprimer)
     ulTache.appendChild(tache)
 
-    terminerTache()
+    optionTerminerTache()
     supprimerTache()
     compteTache()
+    effacerInputTache()
 }
 
 btnAjouter.addEventListener('click', ajoutTache)
 
 //Marquer une tâche comme terminé quand on clique dessus
-
-function terminerTache() {
+function optionTerminerTache() {
     let ensembleDesTaches = document.querySelectorAll('span')
     ensembleDesTaches.forEach(element => {
         element.addEventListener('click', (event) => {
@@ -62,6 +61,8 @@ function supprimerTache() {
     btnSupprimer.forEach(element => {
         element.addEventListener("click", (event) => {
             event.target.closest('li').remove()
+            compteurDeTache--
+            nombreTache.innerText = `${compteurDeTache} tâche(s)`
         })
     })
 }
@@ -70,6 +71,10 @@ function supprimerTache() {
 let nombreTache = document.getElementById('nombre-taches')
 
 function compteTache(){
-    index++
-    nombreTache.innerText = `${index} tâche(s)`
+    compteurDeTache++
+    nombreTache.innerText = `${compteurDeTache} tâche(s)`
+}
+
+function effacerInputTache(){
+    nvelleTache.value = ''
 }

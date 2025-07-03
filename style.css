@@ -1,0 +1,97 @@
+h3 {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: #C11C84;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    background: pink;
+}
+
+#texte_tache {
+    color: #C11C84;
+    text-align: center;
+}
+
+.todo-input-group {
+    text-align: center;
+    margin-top: 25px;
+}
+
+input {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 25px;
+    size: 20px;
+    border-color: #C11C84;
+    height:40px;
+    width: 400px;
+    border-color: #C11C84;
+    color: #C11C84;
+    font-size: 15px;
+}
+
+.btn-primary {
+    color:#C11C84;
+    background-color: pink; 
+    border-color: #C11C84;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 10px 10px; 
+    justify-content: center;
+}
+
+#nombre-taches {
+    color: #C11C84;
+    text-align: center;
+    font-size : 25px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 100px;
+}
+
+li {
+    color:#C11C84;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none
+}
+
+ul {
+    text-align: center;
+}
+
+li::before { 
+    content: "🌸"; 
+    font-size: 1.2em; 
+    list-style-position: inside;
+}
+
+#btn-supprimer {
+    color:#C11C84;
+    background-color: pink; 
+    border-color: #C11C84;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 10px 10px; 
+    justify-content: center;    
+}
